@@ -317,7 +317,7 @@ class PyComment(object):
             finally:
                 fh.close()
                 if ok:
-                    os.rename(tmp_filename, self.input_file)
+                    os.replace(tmp_filename, self.input_file)
                 else:
                     os.unlink(tmp_filename)
 
